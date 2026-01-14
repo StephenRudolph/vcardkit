@@ -26,7 +26,7 @@ public struct VCard: VComponent {
     public var bday: [VCardDate]?
     public var anniversary: Date?
     public var gender: VCardGender?
-    public var adr: [VCardAddress]?
+    public var adr: [VCardTyped<VCardAddress>]?
     public var tel: [VCardTyped<VCardTelephone>]?
     public var email: [VCardTyped<String>]?
     public var impp: [VCardTyped<URL>]?
@@ -37,7 +37,7 @@ public struct VCard: VComponent {
     public var role: [VCardTyped<String>]?
     public var org: [VCardTyped<VCardOrganization>]?
     public var member: [URL]?
-    public var related: [VCardRelated]?
+    public var related: [VCardTyped<VCardRelated>]?
     public var categories: [VCardTyped<String>]?
     public var note: [VCardTyped<String>]?
     public var rev: Date?
@@ -103,7 +103,7 @@ public struct VCard: VComponent {
         bday: [VCardDate]? = nil,
         anniversary: Date? = nil,
         gender: VCardGender? = nil,
-        adr: [VCardAddress]? = nil,
+        adr: [VCardTyped<VCardAddress>]? = nil,
         tel: [VCardTyped<VCardTelephone>]? = nil,
         email: [VCardTyped<String>]? = nil,
         impp: [VCardTyped<URL>]? = nil,
@@ -114,7 +114,7 @@ public struct VCard: VComponent {
         role: [VCardTyped<String>]? = nil,
         org: [VCardTyped<VCardOrganization>]? = nil,
         member: [URL]? = nil,
-        related: [VCardRelated]? = nil,
+        related: [VCardTyped<VCardRelated>]? = nil,
         categories: [VCardTyped<String>]? = nil,
         note: [VCardTyped<String>]? = nil,
         rev: Date? = Date(),
