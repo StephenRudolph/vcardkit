@@ -16,7 +16,7 @@ public struct VCardAddress: VPropertyEncodable {
     public var country: String
 
     public var vEncoded: String {
-        [postOfficeBox, extendedAddress, streetAddress, locality, region, country].joined(separator: ";")
+        [postOfficeBox, extendedAddress, streetAddress, locality, region, postalCode, country].joined(separator: ";")
     }
 
     public init(
