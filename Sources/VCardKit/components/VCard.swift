@@ -21,6 +21,9 @@ public struct VCard: VComponent {
     public var xml: [String]?
     public var fn: [VCardTyped<String>] // required
     public var n: VCardName?
+    public var phoneticFirstName: [VCardTyped<String>]?
+    public var phoneticMiddleName: [VCardTyped<String>]?
+    public var phoneticLastName: [VCardTyped<String>]?
     public var nickname: [VCardTyped<String>]?
     public var photo: [VCardTyped<URL>]?
     public var bday: [VCardDate]?
@@ -58,6 +61,9 @@ public struct VCard: VComponent {
             ("XML", xml),
             ("FN", fn),
             ("N", [n]),
+            ("X-PHONETIC-FIRST-NAME", phoneticFirstName),
+            ("X-PHONETIC-MIDDLE-NAME", phoneticMiddleName),
+            ("X-PHONETIC-LAST-NAME", phoneticLastName),
             ("NICKNAME", nickname),
             ("PHOTO", photo),
             ("BDAY", bday),
@@ -98,6 +104,9 @@ public struct VCard: VComponent {
         xml: [String]? = nil,
         fn: [VCardTyped<String>], // required
         n: VCardName? = nil,
+        phoneticFirstName: [VCardTyped<String>]? = nil,
+        phoneticMiddleName: [VCardTyped<String>]? = nil,
+        phoneticLastName: [VCardTyped<String>]? = nil,
         nickname: [VCardTyped<String>]? = nil,
         photo: [VCardTyped<URL>]? = nil,
         bday: [VCardDate]? = nil,
@@ -132,6 +141,9 @@ public struct VCard: VComponent {
         self.xml = xml
         self.fn = fn
         self.n = n
+        self.phoneticFirstName = phoneticFirstName
+        self.phoneticMiddleName = phoneticMiddleName
+        self.phoneticLastName = phoneticLastName
         self.nickname = nickname
         self.photo = photo
         self.bday = bday
